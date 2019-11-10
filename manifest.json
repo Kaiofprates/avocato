@@ -1,0 +1,23 @@
+{
+    "manifest_version" : 2, 
+   "name" : "Avocato", 
+   "version" : "0.1",
+   "description" :"Validador de provas digitais", 
+   "icons" : { "128" : "./assets/icon.png"}, 
+   "permissions" : ["activeTab","tabs"],
+   "browser_action": {
+     "default_icon" : "./assets/icon.png"
+     },
+   "content_scripts":[
+       {
+         "matches" : [
+           "https://www.facebook.com/*"
+           
+           ],
+           "js" : ["content.js"]
+       }
+       ],
+       "background": {
+        "scripts": ["background.js"]
+      }
+   }
