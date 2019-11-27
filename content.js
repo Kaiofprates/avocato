@@ -6,7 +6,7 @@
 // metadados
 
 function getMedata(){
-    var user = document.cookie.split(";").filter((s) => s.indexOf('c_user') == 1);
+    var user = document.cookie.split(";").filter((s) => s.indexOf('c_user') > -1);
     const userId = user[0].trim();
     const page = document.location.href;
     const date = Date.now();
